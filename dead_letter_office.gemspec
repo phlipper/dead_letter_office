@@ -13,13 +13,13 @@ Gem::Specification.new do |s|
   s.summary     = "This project implements a Dead letter office for your Rails 3 application."
   s.description = "Undeliverable emails (deliveries which raise exceptions) will be logged to the database and can be viewed via a mountable web interface."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2.6"
 
   s.add_development_dependency "capybara"
-  s.add_development_dependency "guard-rspec"
-  s.add_development_dependency "guard-spork"
-  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "guard-minitest"
+  s.add_development_dependency "minitest-spec-rails"
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "simplecov"
 end
