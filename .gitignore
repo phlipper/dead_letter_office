@@ -1,5 +1,5 @@
 .bundle/
-log/*.log
+log/
 pkg/
 spec/dummy/db/*.sqlite3
 spec/dummy/log/*.log
@@ -7,3 +7,4 @@ spec/dummy/tmp/
 spec/dummy/.sass-cache
 coverage/
 .DS_Store
+tmp/
