@@ -1,0 +1,8 @@
+# Travis CI
+test:
+  adapter: postgresql
+  database: anedot_test
+  username: postgres
+  encoding: unicode
+  host: localhost
+  min_messages: warning

@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 1.9.3
+env:
+  - CI=true RAILS_ENV=test DB=mysql
+  - CI=true RAILS_ENV=test DB=postgres
+  - CI=true RAILS_ENV=test DB=sqlite
+before_script: "./spec/ci/before_script.sh"
+script: "bundle exec rake spec"
