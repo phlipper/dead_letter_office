@@ -1,0 +1,6 @@
+# Travis CI
+test:
+  adapter: jdbcmysql
+  database: anedot_test
+  username: root
+  encoding: utf8
