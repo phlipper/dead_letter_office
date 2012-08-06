@@ -19,6 +19,7 @@ group :test do
     gem "mysql2"
     gem "pg"
     gem "sqlite3"
+    gem "simplecov"
   end
 
   platforms :jruby do
