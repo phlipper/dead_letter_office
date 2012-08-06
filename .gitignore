@@ -9,3 +9,4 @@ coverage/
 .DS_Store
 tmp/
 .sass-cache
+.rbx/
