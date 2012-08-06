@@ -16,10 +16,11 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2.6"
+  s.add_dependency "sass-rails", "~> 3.2.5"
 
   s.add_development_dependency "capybara"
   s.add_development_dependency "guard-minitest"
-  s.add_development_dependency "minitest-spec-rails"
+  s.add_development_dependency "minitest-rails"
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "simplecov"
 end
