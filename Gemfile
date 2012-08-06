@@ -9,7 +9,21 @@ gemspec
 gem "jquery-rails"
 gem "sass-rails"
 
+platforms :jruby do
+  gem "activerecord-jdbc-adapter", require: false
+end
+
 group :test do
-  gem "mysql2"
-  gem "pg"
+
+  platforms :ruby do
+    gem "mysql2"
+    gem "pg"
+    gem "sqlite3"
+  end
+
+  platforms :jruby do
+    gem "activerecord-jdbcmysql-adapter", require: false
+    gem "activerecord-jdbcpostgresql-adapter", require: false
+    gem "activerecord-jdbcsqlite3-adapter", require: false
+  end
 end
