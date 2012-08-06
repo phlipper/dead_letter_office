@@ -11,4 +11,5 @@ case $DB in
     cp spec/ci/database.sqlite.yml spec/dummy/config/database.yml;;
 esac
 
+cd spec/dummy
 RAILS_ENV=test bundle exec rake db:setup db:migrate
