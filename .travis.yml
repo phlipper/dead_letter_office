@@ -5,8 +5,8 @@ rvm:
   - jruby-19mode
   - rbx-19mode
 env:
-  - CI=true RAILS_ENV=test RBXOPT=-X19 DB=mysql
-  - CI=true RAILS_ENV=test RBXOPT=-X19 DB=postgres
-  - CI=true RAILS_ENV=test RBXOPT=-X19 DB=sqlite
+  - CI=true RAILS_ENV=test JRUBY_OPTS=--1.9 RBXOPT=-X19 DB=mysql
+  - CI=true RAILS_ENV=test JRUBY_OPTS=--1.9 RBXOPT=-X19 DB=postgres
+  - CI=true RAILS_ENV=test JRUBY_OPTS=--1.9 RBXOPT=-X19 DB=sqlite
 before_script: "./spec/ci/before_script.sh"
 script: "bundle exec rake spec"
