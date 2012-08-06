@@ -1,6 +1,6 @@
 # Dead Letter Office
 
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/phlipper/dead_letter_office)
+[![Build Status](https://secure.travis-ci.org/phlipper/dead_letter_office.png?branch=master)](http://travis-ci.org/phlipper/dead_letter_office) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/phlipper/dead_letter_office)
 
 [![Dead Letter Office](https://img.skitch.com/20120712-fbycp3kf5yhupq6txnaucknc3d.png)](http://phlippers.net/dead_letter_office)
 
