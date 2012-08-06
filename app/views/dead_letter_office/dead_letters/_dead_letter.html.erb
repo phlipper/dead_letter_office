@@ -1,0 +1,68 @@
+<div class="modal fade hide" id="<%= dom_id(dead_letter, :details) %>">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>Message Details</h3>
+  </div>
+
+  <div class="modal-body">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>Exception:</th>
+          <td><%= dead_letter.exception_name %>: <%= dead_letter.exception_message %></td>
+        </tr>
+        <tr>
+          <th>Mailer:</th>
+          <td><%= dead_letter.mailer %></td>
+        </tr>
+        <tr>
+          <th>ID:</th>
+          <td><%= dead_letter.message_id %></td>
+        </tr>
+        <tr>
+          <th>Subject:</th>
+          <td><%= dead_letter.subject %></td>
+        </tr>
+        <tr>
+          <th>From:</th>
+          <td><%= dead_letter.from %></td>
+        </tr>
+        <tr>
+          <th>To:</th>
+          <td><%= dead_letter.to %></td>
+        </tr>
+        <tr>
+          <th>CC:</th>
+          <td><%= dead_letter.cc %></td>
+        </tr>
+        <tr>
+          <th>BCC:</th>
+          <td><%= dead_letter.bcc %></td>
+        </tr>
+        <tr>
+          <th>Date:</th>
+          <td><%= dead_letter.date.to_s %></td>
+        </tr>
+        <tr>
+          <th>Body:</th>
+          <td>
+            <pre><%= dead_letter.mail %></pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal-footer">
+    <!-- clear message -->
+    <%= link_to dead_letter_path(dead_letter), method: :delete,
+          class: "btn btn-danger", data: { confirm: "Are you sure?" } do %>
+      <i class="icon-trash icon-white"></i> Remove
+    <% end %>
+
+    <!-- close modal -->
+    <a href="#" class="btn" data-dismiss="modal">
+      <i class="icon-remove"></i> Close
+    </a>
+  </div>
+</div>

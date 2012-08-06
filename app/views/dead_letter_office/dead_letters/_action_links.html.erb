@@ -1,0 +1,20 @@
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    <i class="icon-cog"></i> Actions
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <!-- dropdown menu links -->
+    <li>
+      <%= link_to "#", data: { message_id: dead_letter.id } do %>
+        <i class="icon-envelope"></i> View Details
+      <% end %>
+    </li>
+    <li>
+      <%= link_to dead_letter_path(dead_letter), method: :delete,
+            remote: true, data: { confirm: "Are you sure?" } do %>
+        <i class="icon-trash"></i> Remove
+      <% end %>
+    </li>
+  </ul>
+</div>

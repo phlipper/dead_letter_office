@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>DeadLetterOffice</title>
-  <%= stylesheet_link_tag    "dead_letter_office/application", :media => "all" %>
-  <%= javascript_include_tag "dead_letter_office/application" %>
+  <title>Dead Letter Office</title>
+  <%= stylesheet_link_tag "dead_letter_office/application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
 
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a class="brand" href="#">Dead Letter Office</a>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="http://phlippers.net/dead_letter_office">About</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= yield %>
+
+  <hr>
+  <footer>
+    <p>&copy; 2012 Phil Cohen - <a href="http://phlippers.net">http://phlippers.net</a></p>
+  </footer>
+</div>
+
+<%= javascript_include_tag "dead_letter_office/application" %>
 </body>
 </html>

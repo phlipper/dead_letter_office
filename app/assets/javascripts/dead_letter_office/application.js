@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require dead_letter_office/bootstrap.min
+//= require dead_letter_office/datatables
+//= require dead_letter_office/bootstrap_pagination
+//= require dead_letter_office/dead_letters

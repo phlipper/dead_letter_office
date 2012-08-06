@@ -8,6 +8,17 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require dead_letter_office/bootstrap.min
+ *= require dead_letter_office/datatables
+ *= require dead_letter_office/dead_letters
  *= require_self
- *= require_tree .
  */
+
+
+body {
+  margin-top: 50px;
+}
+
+#dead_letters_wrapper {
+  margin-top: 20px;
+}

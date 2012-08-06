@@ -1,0 +1,4 @@
+var rowTarget = "<%= dom_id @dead_letter, :row %>";
+$("#" + rowTarget).hide("slow", function() { $("#" + rowTarget).remove(); });
+
+$("h1").after("<%=j render "notice", notice: "Dead Letter has been removed." %>");
