@@ -16,7 +16,15 @@ This project implements a [Dead letter office](https://en.wikipedia.org/wiki/Dea
 
 Dead letter office is currently being developed against the following stack:
 
-* Ruby 1.9.x
+**Ruby**
+
+* Ruby 1.9.2
+* Ruby 1.9.3
+* ~~JRuby 1.6+ (1.9 mode)~~ (passes locally, fails on [Travis CI](http://travis-ci.org/#!/phlipper/dead_letter_office))
+* ~~Rubinius 2.0 (1.9 mode)~~ (I am anxiously awaiting passable 1.9 support)
+
+**Rails**
+
 * Rails 3.2.x
 
 It is possible that this may work on older versions of Rails. I do not have any plans to support older versions of Ruby.
@@ -37,11 +45,21 @@ gem "dead_letter_office"
 rake dead_letter_office:install:migrations db:migrate db:test:prepare
 ```
 
+* Mount the web interface in your `config/routes.rb` file:
+
+```ruby
+namespace :admin do
+  mount DeadLetterOffice::Engine => "/dead_letter_office"
+end
+```
+
+Using the example above, you may now view the UI at http://lvh.me:3000/admin/dead_letter_office
 
 
 ## TODO
 
-* retry delivery
+* add http authentication
+* retry message delivery
 * clear all failures
 * customizable alert notifications
 
