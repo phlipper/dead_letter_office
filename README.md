@@ -1,5 +1,7 @@
 # Dead Letter Office
 
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/phlipper/dead_letter_office)
+
 [![Dead Letter Office](https://img.skitch.com/20120712-fbycp3kf5yhupq6txnaucknc3d.png)](http://phlippers.net/dead_letter_office)
 
 
@@ -10,7 +12,7 @@ This project implements a [Dead letter office](https://en.wikipedia.org/wiki/Dea
 
 ## Requirements
 
-### Support Platforms
+### Supported Platforms
 
 Dead letter office is currently being developed against the following stack:
 
@@ -40,7 +42,7 @@ rake dead_letter_office:install:migrations db:migrate db:test:prepare
 ## TODO
 
 * retry delivery
-* clear failures
+* clear all failures
 * customizable alert notifications
 
 
